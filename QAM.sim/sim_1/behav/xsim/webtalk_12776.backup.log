@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Thu Jul 19 21:40:08 2018
+# Process ID: 12776
+# Current directory: D:/Users/alexa/Documents/GitHub/QAM/QAM.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source D:/Users/alexa/Documents/GitHub/QAM/QAM.sim/sim_1/behav/xsim/xsim.dir/PWM_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/Users/alexa/Documents/GitHub/QAM/QAM.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: D:/Users/alexa/Documents/GitHub/QAM/QAM.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source D:/Users/alexa/Documents/GitHub/QAM/QAM.sim/sim_1/behav/xsim/xsim.dir/PWM_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'D:/Users/alexa/Documents/GitHub/QAM/QAM.sim/sim_1/behav/xsim/xsim.dir/PWM_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Jul 19 21:40:09 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Jul 19 21:40:09 2018...

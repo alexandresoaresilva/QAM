@@ -1,0 +1,7 @@
+Running: xsim.dir/separateASCII_to_hex_tb_behav/xsimk.exe -simmode gui -wdb separateASCII_to_hex_tb_behav.wdb -simrunnum 0 -socket 50951
+Design successfully loaded
+Design Loading Memory Usage: 4892 KB (Peak: 4892 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 13608 KB (Peak: 13608 KB)
+Simulation CPU Usage: 11686 ms

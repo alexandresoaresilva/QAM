@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../QAM.srcs/sources_1/ip/clk_wiz_0" \
+"../../../../QAM.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v" \
+"../../../../QAM.srcs/sources_1/new/PWM.v" \
+"../../../../QAM.srcs/sources_1/new/counter.v" \
+"../../../../QAM.srcs/sources_1/new/sin_wave.v" \
+"../../../../QAM.srcs/sources_1/new/sin_wave_Xperiods.v" \
+"../../../../QAM.srcs/sim_1/new/sin_wave_Xperiods_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

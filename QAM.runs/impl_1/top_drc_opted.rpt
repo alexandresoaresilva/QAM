@@ -1,0 +1,55 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Thu Jul 19 22:57:43 2018
+| Host         : laptopASUS running 64-bit major release  (build 9200)
+| Command      : report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
+| Design       : top
+| Device       : xc7a35tcpg236-1
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 3
++----------+------------------+------------------------+------------+
+| Rule     | Severity         | Description            | Violations |
++----------+------------------+------------------------+------------+
+| BIVC-1   | Error            | Bank IO standard Vcc   | 1          |
+| PLCK-87  | Error            | Clock Placer Checks    | 1          |
+| CFGBVS-2 | Critical Warning | CFGBVS Design Property | 1          |
++----------+------------------+------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+BIVC-1#1 Error
+Bank IO standard Vcc  - IOBank:35
+Conflicting Vcc voltages in bank 35. For example, the following two ports in this bank have conflicting VCCOs:  
+JA[0] (LVCMOS12, requiring VCCO=1.200) and LED[12] (LVCMOS33, requiring VCCO=3.300)
+Related violations: <none>
+
+PLCK-87#1 Error
+Clock Placer Checks  
+IO/clock placer failed to collectively place all IOs and clock instances. This is likely due to design requirements or user constraints specified in the constraint file such as IO standards, bank/voltage/DCI/VREF specifications, together with the part and package being used for the implementation. Please check the above for any possible conflicts.
+
+Related violations: <none>
+
+CFGBVS-2#1 Critical Warning
+CFGBVS Design Property  
+The CFGBVS property is not set for current_design. To indicate how the configuration bank voltage select (CSGBVS) pin will be used, the CFGBVS property must be set to VCCO or GND.  This will determine the I/O voltage support for the pins in bank 0.  Refer to device configuration user guide for more information.
+Related violations: <none>
+
+
