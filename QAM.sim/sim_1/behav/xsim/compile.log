@@ -1,2 +1,20 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/alexa/Documents/GitHub/QAM/QAM.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz_0_clk_wiz
 INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/PWM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PWM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/conv_Hex_to_sin_Xperiods.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module conv_Hex_to_sin_Xperiods
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/separateASCII_to_hex.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module separateASCII_to_hex
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/sin_wave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sin_wave
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/sin_wave_Xperiods.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sin_wave_Xperiods
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sim_1/new/top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_tb

@@ -376,5 +376,5 @@ set_property PACKAGE_PIN G3 [get_ports {JA[7]}]
 #set_property BITSTREAM.CONFIG.SPI_BUSWIDTH 4 [current_design]
 
 
-set_property CONFIG_VOLTAGE 3.3 [current_design]
+#set_property CONFIG_VOLTAGE 3.3 [current_design]
 #set_property CFGBVS VCCO [current_design]

@@ -2,17 +2,17 @@
 2018.1
 Apr  4 2018
 19:30:32
-D:/Users/alexa/Documents/GitHub/QAM/QAM.sim/sim_1/behav/xsim/glbl.v,1522801934,verilog,,,,glbl,,,,,,,,
 D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sim_1/new/conv_Hex_to_sin_Xperiods_tb.v,1532055457,verilog,,,,conv_Hex_to_sin_Xperiods_tb,,,../../../../QAM.srcs/sources_1/ip/clk_wiz_0,,,,,
 D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sim_1/new/separateASCII_to_hex_tb.v,1532055759,verilog,,,,separateASCII_to_hex_tb,,,../../../../QAM.srcs/sources_1/ip/clk_wiz_0,,,,,
 D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sim_1/new/sin_wave_Xperiods_tb.v,1532053844,verilog,,,,sin_wave_Xperiods_tb,,,../../../../QAM.srcs/sources_1/ip/clk_wiz_0,,,,,
 D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sim_1/new/sin_wave_tb.v,1532054205,verilog,,,,sin_wave_tb,,,../../../../QAM.srcs/sources_1/ip/clk_wiz_0,,,,,
 D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sim_1/new/top_tb.v,1532057349,verilog,,,,top_tb,,,../../../../QAM.srcs/sources_1/ip/clk_wiz_0,,,,,
+D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v,1531613566,verilog,,D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/PWM.v,,clk_wiz_0;clk_wiz_0_clk_wiz_0_clk_wiz;glbl,,,../../../../QAM.srcs/sources_1/ip/clk_wiz_0,,,,,
 D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/PWM.v,1532034493,verilog,,D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/conv_Hex_to_sin_Xperiods.v,,PWM,,,../../../../QAM.srcs/sources_1/ip/clk_wiz_0,,,,,
 D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/PWM_tb.v,1532035041,verilog,,,,PWM_tb,,,../../../../QAM.srcs/sources_1/ip/clk_wiz_0,,,,,
 D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/conv_Hex_to_sin_Xperiods.v,1532029019,verilog,,D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/counter.v,,conv_Hex_to_sin_Xperiods,,,../../../../QAM.srcs/sources_1/ip/clk_wiz_0,,,,,
 D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/counter.v,1532034431,verilog,,D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/separateASCII_to_hex.v,,counter,,,../../../../QAM.srcs/sources_1/ip/clk_wiz_0,,,,,
 D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/separateASCII_to_hex.v,1532044891,verilog,,D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/sin_wave.v,,separateASCII_to_hex,,,../../../../QAM.srcs/sources_1/ip/clk_wiz_0,,,,,
-D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/sin_wave.v,1532054713,verilog,,D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/sin_wave_Xperiods.v,,sin_wave,,,../../../../QAM.srcs/sources_1/ip/clk_wiz_0,,,,,
+D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/sin_wave.v,1532059158,verilog,,D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/sin_wave_Xperiods.v,,sin_wave,,,../../../../QAM.srcs/sources_1/ip/clk_wiz_0,,,,,
 D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/sin_wave_Xperiods.v,1532055126,verilog,,D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/top.v,,sin_wave_Xperiods,,,../../../../QAM.srcs/sources_1/ip/clk_wiz_0,,,,,
 D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/top.v,1532057878,verilog,,D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sim_1/new/top_tb.v,,top,,,../../../../QAM.srcs/sources_1/ip/clk_wiz_0,,,,,

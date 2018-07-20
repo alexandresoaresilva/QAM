@@ -2,8 +2,8 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Thu Jul 19 22:56:17 2018
-# Process ID: 13980
+# Start of session at: Fri Jul 20 17:15:41 2018
+# Process ID: 8168
 # Current directory: D:/Users/alexa/Documents/GitHub/QAM/QAM.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: D:/Users/alexa/Documents/GitHub/QAM/QAM.runs/synth_1/top.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11608 
+INFO: Helper process launched with PID 18724 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 387.789 ; gain = 98.527
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 388.023 ; gain = 97.512
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/top.v:23]
 INFO: [Synth 8-6157] synthesizing module 'separateASCII_to_hex' [D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/separateASCII_to_hex.v:21]
@@ -50,8 +50,8 @@ INFO: [Synth 8-226] default block is never used [D:/Users/alexa/Documents/GitHub
 INFO: [Synth 8-6155] done synthesizing module 'conv_Hex_to_sin_Xperiods' (5#1) [D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/conv_Hex_to_sin_Xperiods.v:23]
 WARNING: [Synth 8-6014] Unused sequential element previous_debugDuty_reg was removed.  [D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/separateASCII_to_hex.v:94]
 INFO: [Synth 8-6155] done synthesizing module 'separateASCII_to_hex' (6#1) [D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/separateASCII_to_hex.v:21]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [D:/Users/alexa/Documents/GitHub/QAM/QAM.runs/synth_1/.Xil/Vivado-13980-laptopASUS/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (7#1) [D:/Users/alexa/Documents/GitHub/QAM/QAM.runs/synth_1/.Xil/Vivado-13980-laptopASUS/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [D:/Users/alexa/Documents/GitHub/QAM/QAM.runs/synth_1/.Xil/Vivado-8168-laptopASUS/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (7#1) [D:/Users/alexa/Documents/GitHub/QAM/QAM.runs/synth_1/.Xil/Vivado-8168-laptopASUS/realtime/clk_wiz_0_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'top' (8#1) [D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/top.v:23]
 WARNING: [Synth 8-3917] design top has port LED[15] driven by constant 0
 WARNING: [Synth 8-3917] design top has port LED[14] driven by constant 0
@@ -65,7 +65,7 @@ WARNING: [Synth 8-3917] design top has port JA[4] driven by constant 0
 WARNING: [Synth 8-3917] design top has port JA[3] driven by constant 0
 WARNING: [Synth 8-3917] design top has port JA[2] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 442.461 ; gain = 153.199
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 442.672 ; gain = 152.160
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -78,10 +78,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 442.461 ; gain = 153.199
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 442.672 ; gain = 152.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 442.461 ; gain = 153.199
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 442.672 ; gain = 152.160
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -99,16 +99,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 788.367 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 789.152 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 788.367 ; gain = 499.105
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 789.152 ; gain = 498.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 788.367 ; gain = 499.105
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 789.152 ; gain = 498.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -117,11 +117,11 @@ Applied set_property IO_BUFFER_TYPE = NONE for CLK. (constraint file  d:/Users/a
 Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK. (constraint file  d:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for newClockUt. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 788.367 ; gain = 499.105
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 789.152 ; gain = 498.641
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "doneConverting0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 788.367 ; gain = 499.105
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 789.152 ; gain = 498.641
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -278,7 +278,7 @@ WARNING: [Synth 8-3332] Sequential element (const/constit_reg[2686]) is unused a
 WARNING: [Synth 8-3332] Sequential element (const/constit_reg[2687]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (const/constit_reg[2688]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 788.367 ; gain = 499.105
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 789.152 ; gain = 498.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -311,13 +311,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'newClockUt/clk_out1' to pin 'newClockUt/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 788.367 ; gain = 499.105
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 789.152 ; gain = 498.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 798.340 ; gain = 509.078
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 797.648 ; gain = 507.137
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -329,7 +329,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 805.727 ; gain = 516.465
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 805.426 ; gain = 514.914
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -353,7 +353,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 805.727 ; gain = 516.465
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 805.426 ; gain = 514.914
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -366,7 +366,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 805.727 ; gain = 516.465
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 805.426 ; gain = 514.914
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -378,25 +378,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 805.727 ; gain = 516.465
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 805.426 ; gain = 514.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 805.727 ; gain = 516.465
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 805.426 ; gain = 514.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 805.727 ; gain = 516.465
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 805.426 ; gain = 514.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 805.727 ; gain = 516.465
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 805.426 ; gain = 514.914
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -477,11 +477,11 @@ Report Instance Areas:
 |12    |        x_periods       |counter                  |   101|
 +------+------------------------+-------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 805.727 ; gain = 516.465
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 805.426 ; gain = 514.914
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 3 critical warnings and 25 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 805.727 ; gain = 170.559
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 805.727 ; gain = 516.465
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 805.426 ; gain = 168.434
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 805.426 ; gain = 514.914
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 77 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -494,8 +494,8 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 43 Infos, 37 Warnings, 3 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 805.727 ; gain = 527.934
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 805.426 ; gain = 526.387
 INFO: [Common 17-1381] The checkpoint 'D:/Users/alexa/Documents/GitHub/QAM/QAM.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 805.727 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Jul 19 22:57:06 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 805.426 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 20 17:16:29 2018...

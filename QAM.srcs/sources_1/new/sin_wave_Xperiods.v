@@ -35,16 +35,12 @@ module sin_wave_Xperiods
     sin_wave sin10x(
         .clock(clock),
         .reset(reset),
-        //amplitude_select_reg if 2'b11 : base voltage 
         .amplitude_select(amp_select),
         .offset_sampleSelect(offset),
         .sin_PWM(sin_waves),
         .dutyCycle_out(debugDuty),
 		.sample_select_out(sampleSelec_out)
         );
-
-//    initial
-//        {periods, amplitude_select_reg, previous_clock} <= 0;
     
 always@(posedge clock) begin
 		if (reset)
@@ -53,7 +49,6 @@ always@(posedge clock) begin
             if ( countedUpTo_wire  >= 0 && countedUpTo_wire < PERIOD) begin
                 periods <= 0;
             end
-            
             if (newClock & !(newClock & previous_clock )) begin//rising edge
                 if ( countedUpTo_wire  >=  PERIOD && countedUpTo_wire < PERIOD_X)
                     periods <= periods + 1;
@@ -88,5 +83,7 @@ always@(posedge clock) begin
       .period(PERIOD_X), 
       .countedTo(countedUpTo_wire) 
       );
+      
+      
     assign debug_periods = (periods === 3'dX || periods === 3'dz)? 3'd0 : periods ;
 endmodule

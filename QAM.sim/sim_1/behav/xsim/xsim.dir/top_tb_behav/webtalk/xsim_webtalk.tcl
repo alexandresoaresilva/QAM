@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir D:/Users/alexa/Documents/GitHub/QAM/QAM.sim/sim_1/behav/xsim/xsim.dir/top_tb_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Thu Jul 19 22:56:11 2018" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Fri Jul 20 14:46:35 2018" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2018.1 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2188600" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "274f9fa2-6cfb-4262-bb45-b7d2d3bf4c1d" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "b75ef064fd0c4f7c876c0496493b712d" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "37" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "39" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz" -context "user_environment"
@@ -24,9 +24,9 @@ webtalk_add_data -client project -key system_ram -value "17.000 GB" -context "us
 webtalk_register_client -client xsim
 webtalk_add_data -client xsim -key Command -value "xsim" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\usage"
-webtalk_add_data -client xsim -key runtime -value "98804 ns" -context "xsim\\usage"
-webtalk_add_data -client xsim -key iteration -value "2" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Time -value "1.05_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Memory -value "10072_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 1654423224 -regid "" -xml D:/Users/alexa/Documents/GitHub/QAM/QAM.sim/sim_1/behav/xsim/xsim.dir/top_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html D:/Users/alexa/Documents/GitHub/QAM/QAM.sim/sim_1/behav/xsim/xsim.dir/top_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm D:/Users/alexa/Documents/GitHub/QAM/QAM.sim/sim_1/behav/xsim/xsim.dir/top_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key runtime -value "10 ms" -context "xsim\\usage"
+webtalk_add_data -client xsim -key iteration -value "3" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Time -value "95.33_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Memory -value "14364_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 1621921340 -regid "" -xml D:/Users/alexa/Documents/GitHub/QAM/QAM.sim/sim_1/behav/xsim/xsim.dir/top_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html D:/Users/alexa/Documents/GitHub/QAM/QAM.sim/sim_1/behav/xsim/xsim.dir/top_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm D:/Users/alexa/Documents/GitHub/QAM/QAM.sim/sim_1/behav/xsim/xsim.dir/top_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate
