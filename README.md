@@ -1,5 +1,2 @@
 # QAM
-16 Quadrature Amplitude Modulation, implemented at 1000 Hz carrier signal with 125 symbols/s in Verilog.
-Mini-project for the Project Lab 3 class at Texas Tech University. Written in Verilog using Xilinx Vivado.
-
-Timinigs of the counters/PWMs are based on a 100 MHz clock (my reference is the Xilinx Basys3 FPGA).
+16 Quadrature Amplitude Modulation, implemented with a 25 KHz PWM signal using a 400 MHz buffered clock on a Digilent Basys3 FPGA. Each 4 periods of the 25 kHz represents one 16-QAM symbol, yielding a 6250 symbols per second rate.
