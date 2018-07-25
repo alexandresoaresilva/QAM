@@ -6,10 +6,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module sin_wave_Xperiods 
-    #( parameter [28:0] PERIOD = 29'd16_000,
-       parameter [2:0] LEFT_SHIFTS = 2, // FOR 8 periods, '; fopr 4, 2
+    #(  parameter [28:0] PERIOD = 29'd16_000,
+        parameter [2:0] LEFT_SHIFTS = 2, // FOR 8 periods, '; fopr 4, 2
         parameter [28:0] HALF_PERIOD =  PERIOD >>1,
-       parameter [28:0] PERIOD_X = PERIOD << LEFT_SHIFTS
+        parameter [28:0] PERIOD_X = PERIOD << LEFT_SHIFTS
     ) // for 400 MHz, /40 microsec
     (
     input clock, reset,
@@ -30,9 +30,9 @@ module sin_wave_Xperiods
 	wire [28:0] countedUpTo_wire;
     wire [1:0] amp_select;
     
-    
     assign amp_select = {(amplitude_select[1] | amplitude_select_reg[1]), (amplitude_select[0] | amplitude_select_reg[0])};
-    sin_wave sin10x(
+    
+    sin_wave sinX(
         .clock(clock),
         .reset(reset),
         .amplitude_select(amp_select),
@@ -42,10 +42,10 @@ module sin_wave_Xperiods
 		.sample_select_out(sampleSelec_out)
         );
     
-always@(posedge clock) begin
-		if (reset)
-			{periods, amplitude_select_reg, previous_clock} <= 0;
-		else begin //previous sample is different from present one
+    always@(posedge clock) begin
+        if (reset)
+            {periods, amplitude_select_reg, previous_clock} <= 0;
+        else begin //previous sample is different from present one
             if ( countedUpTo_wire  >= 0 && countedUpTo_wire < PERIOD) begin
                 periods <= 0;
             end
@@ -54,9 +54,9 @@ always@(posedge clock) begin
                     periods <= periods + 1;
             
             end
-
+    
             previous_clock <= newClock;
-	   end
+       end
     end
 
 //    //selects basis pwm for transitions between symbols
@@ -64,7 +64,7 @@ always@(posedge clock) begin
         if ( countedUpTo_wire  >= 0 && countedUpTo_wire < PERIOD)
             amplitude_select_reg <= 2'd3;
         else
-            amplitude_select_reg <= 2'd0;//it's an or gate
+            amplitude_select_reg <= 2'd0;
     end
 
     defparam clockNew.PERIOD = PERIOD;
@@ -73,7 +73,6 @@ always@(posedge clock) begin
         .reset(reset),
         .dutyCycle( HALF_PERIOD[7:0]),
         .PWM_pulse(newClock)
-        //.debug_counter(debugCustomClkCounter_wire)
     );
 
     counter x_periods( 

@@ -37,7 +37,7 @@ module sin_wave(
     reg [5:0] sample_select;
     reg [5:0] previous_offset;
     wire PWM_pulse, newClock;
-    parameter [8:0] SAMPLES_MAX = 9'd79;
+    parameter [6:0] SAMPLES_MAX = 7'd64;
     //wire [26:0] debugCustomClkCounter_wire;
     
     defparam sin_wavePWM.PERIOD = PERIOD_PWM;
@@ -328,22 +328,6 @@ module sin_wave(
         previousClk <= newClock;
         
     end //of always
-	
-	//always@(posedge clock) begin
-//	always@(*) begin
-//		if (newClock && !(previousClk && newClock)) begin			
-//			if (offset_sampleSelect != previous_offset )
-//                sample_select <= offset_sampleSelect;
-//            else begin
-//                if (sample_select < SAMPLES_MAX)
-//                    sample_select <= sample_select + 1;
-//                else
-//                    sample_select <= 0;
-//            end
-//            previous_offset <= offset_sampleSelect;
-//		end
-//        previousClk <= newClock;
-//	end
 	
 	assign sample_select_out = sample_select;
     assign dutyCycle_out = (dutyCycle === 8'dX || dutyCycle === 8'dZ )?  8'd125 : dutyCycle; 

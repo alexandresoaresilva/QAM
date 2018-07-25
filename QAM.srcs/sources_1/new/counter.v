@@ -25,9 +25,6 @@ module counter(
     input [28:0] period,
     output reg [28:0] countedTo 
     );
-        
-//    initial 
-//        countedTo <= 0;
     
     always@(posedge clock) begin
         if ( reset )

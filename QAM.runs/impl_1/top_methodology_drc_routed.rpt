@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Fri Jul 20 17:18:02 2018
+| Date         : Mon Jul 23 16:22:47 2018
 | Host         : laptopASUS running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
@@ -91,12 +91,12 @@ Related violations: <none>
 
 TIMING-16#12 Warning
 Large setup violation  
-There is a large setup violation of -1.154 ns between const/hexToSinXp/sinXp/sin10x/dutyCycle_reg[1]/C (clocked by clk_out1_clk_wiz_0) and const/hexToSinXp/sinXp/sin10x/sin_wavePWM/PWM_pulse_reg/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.154 ns between const/hexToSinXp/sinXp/sinX/dutyCycle_reg[1]/C (clocked by clk_out1_clk_wiz_0) and const/hexToSinXp/sinXp/sinX/sin_wavePWM/PWM_pulse_reg/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#13 Warning
 Large setup violation  
-There is a large setup violation of -1.154 ns between const/hexToSinXp/sinXp/sin10x/dutyCycle_reg[1]/C (clocked by clk_out1_clk_wiz_0) and const/hexToSinXp/sinXp/sin10x/sin_wavePWM/PWM_pulse_reg_lopt_replica/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.154 ns between const/hexToSinXp/sinXp/sinX/dutyCycle_reg[1]/C (clocked by clk_out1_clk_wiz_0) and const/hexToSinXp/sinXp/sinX/sin_wavePWM/PWM_pulse_reg_lopt_replica/CE (clocked by clk_out1_clk_wiz_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-17#1 Warning

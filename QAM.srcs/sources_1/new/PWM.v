@@ -13,11 +13,6 @@ module PWM #( parameter [28:0] PERIOD = 29'd250 ) // based on the Basys3's deriv
     //reg [28:0] previous_DutyCycle;
     wire [28:0]  countedUpTo_wire; 
     
-//     initial
-//     begin
-//        PWM_pulse = 0;
-//      end
-    
     always@(posedge clock) begin
         if (reset)
             PWM_pulse <= 0;

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Fri Jul 20 17:17:35 2018
+| Date         : Mon Jul 23 16:22:21 2018
 | Host         : laptopASUS running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -60,17 +60,17 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+---------------------------+-----------------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
-|        Clock Signal       |                             Enable Signal                             |                       Set/Reset Signal                      | Slice Load Count | Bel Load Count |
-+---------------------------+-----------------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
-|  CLK_IBUF_BUFG            |                                                                       |                                                             |                1 |              1 |
-|  newClockUt/inst/clk_out1 | const/hexToSinXp/sinXp/sin10x/sin_wavePWM/PWM_counter/PWM_pulse_reg_2 | const/reset_reg_0                                           |                1 |              2 |
-|  newClockUt/inst/clk_out1 |                                                                       |                                                             |                3 |              5 |
-|  newClockUt/inst/clk_out1 | const/hexToSinXp/sinXp/sin10x/clockNew/previous_offset                | const/hexToSinXp/sinXp/sin10x/clockNew/sample_select_reg[5] |                7 |             12 |
-|  CLK_IBUF_BUFG            |                                                                       | clear                                                       |               16 |             64 |
-|  newClockUt/inst/clk_out1 |                                                                       | const/reset_reg_0                                           |               58 |            138 |
-|  newClockUt/inst/clk_out1 | const/hexToSinXp/sinXp/hexSending                                     |                                                             |               96 |            364 |
-|  newClockUt/inst/clk_out1 | const/hexToSinXp/sinXp/hexSending                                     | const/reset_reg_0                                           |              250 |           1736 |
-+---------------------------+-----------------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
++---------------------------+---------------------------------------------------------------------+-----------------------------------------------------------+------------------+----------------+
+|        Clock Signal       |                            Enable Signal                            |                      Set/Reset Signal                     | Slice Load Count | Bel Load Count |
++---------------------------+---------------------------------------------------------------------+-----------------------------------------------------------+------------------+----------------+
+|  CLK_IBUF_BUFG            |                                                                     |                                                           |                1 |              1 |
+|  newClockUt/inst/clk_out1 | const/hexToSinXp/sinXp/sinX/sin_wavePWM/PWM_counter/PWM_pulse_reg_2 | const/reset_reg_0                                         |                1 |              2 |
+|  newClockUt/inst/clk_out1 |                                                                     |                                                           |                3 |              5 |
+|  newClockUt/inst/clk_out1 | const/hexToSinXp/sinXp/sinX/clockNew/previous_offset                | const/hexToSinXp/sinXp/sinX/clockNew/sample_select_reg[5] |                7 |             12 |
+|  CLK_IBUF_BUFG            |                                                                     | clear                                                     |               16 |             64 |
+|  newClockUt/inst/clk_out1 |                                                                     | const/reset_reg_0                                         |               58 |            138 |
+|  newClockUt/inst/clk_out1 | const/hexToSinXp/sinXp/hexSending                                   |                                                           |               96 |            364 |
+|  newClockUt/inst/clk_out1 | const/hexToSinXp/sinXp/hexSending                                   | const/reset_reg_0                                         |              250 |           1736 |
++---------------------------+---------------------------------------------------------------------+-----------------------------------------------------------+------------------+----------------+
 
 
