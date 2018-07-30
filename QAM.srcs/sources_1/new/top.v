@@ -37,7 +37,8 @@ module top( input CLK,
     reg reset_reg;
     
  separateASCII_to_hex const(
-         .clock(clk_400MHz),
+//         .clock(clk_400MHz),
+         .clock(newClock),
          .reset(reset_reg),
          .sin_waveConst(sin_waveConst),
          .doneConvertingConst(LED[0]),
@@ -46,15 +47,24 @@ module top( input CLK,
          .debugXPeriod(debugXPeriod),
          .debug_HexSending(debug_HexSending_wire) );
     
-    clk_wiz_0 newClockUt (
-  // Clock out ports
-  .clk_out1(clk_400MHz),
-  // Status and control signals
-  .reset(1'b0),
-  .locked(locked),
- // Clock in ports
-  .clk_in1(CLK)
- ); 
+//    clk_wiz_0 newClockUt (
+//  // Clock out ports
+//  .clk_out1(clk_400MHz),
+//  // Status and control signals
+//  .reset(1'b0),
+//  .locked(locked),
+// // Clock in ports
+//  .clk_in1(CLK)
+// );
+
+    defparam sin_wavePWM.PERIOD = 4;
+    PWM sin_wavePWM(
+        .clock(CLK),
+        .reset(buttons),
+        .dutyCycle(2),
+        .PWM_pulse(newClock)
+      //  .debug_counter(debugCustomClkCounter_wire)
+    );
     reg [63:0] counter;
     
     initial {counter, reset_reg} <= 1;

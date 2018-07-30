@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date                      : Mon Jul 23 16:22:21 2018
+| Date                      : Sun Jul 29 13:54:38 2018
 | Host                      : laptopASUS running 64-bit major release  (build 9200)
 | Command                   : report_io -file top_io_placed.rpt
 | Design                    : top
@@ -112,7 +112,7 @@ Table of Contents
 | F19        |             |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | G1         |             |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | G2         | JA[3]       | High Range | IO_L1N_T0_AD4N_35            | OUTPUT        | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
-| G3         | JA[7]       | High Range | IO_L1P_T0_AD4P_35            | OUTPUT        | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| G3         | JA[7]       | High Range | IO_L1P_T0_AD4P_35            | TRISTATE      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | G7         |             |            | MGTAVTT                      | Gigabit Power |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | G8         |             |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | G9         |             |            | MGTAVCC                      | Gigabit Power |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

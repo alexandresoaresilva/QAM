@@ -7,15 +7,15 @@ vlib modelsim_lib/msim/xpm
 vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib
 vmap xpm modelsim_lib/msim/xpm
 
-vlog -work xil_defaultlib -64 -incr -sv "+incdir+../../../../QAM.srcs/sources_1/ip/clk_wiz_0" "+incdir+../../../../QAM.srcs/sources_1/ip/clk_wiz_0" \
+vlog -work xil_defaultlib -64 -incr -sv "+incdir+../../../ipstatic" "+incdir+../../../ipstatic" \
 "C:/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
 
 vcom -work xpm -64 -93 \
 "C:/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_VCOMP.vhd" \
 
-vlog -work xil_defaultlib -64 -incr "+incdir+../../../../QAM.srcs/sources_1/ip/clk_wiz_0" "+incdir+../../../../QAM.srcs/sources_1/ip/clk_wiz_0" \
-"../../../../QAM.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v" \
-
+vlog -work xil_defaultlib -64 -incr "+incdir+../../../ipstatic" "+incdir+../../../ipstatic" \
+"../../../../QAM.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
+"../../../../QAM.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

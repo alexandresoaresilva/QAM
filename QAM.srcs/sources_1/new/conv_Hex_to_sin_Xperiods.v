@@ -39,7 +39,7 @@ module conv_Hex_to_sin_Xperiods(
     sin_wave_Xperiods sinXp(
         .clock(clock), 
         .reset(reset),
-        .amplitude_select(amplitude_select),
+        .ampli_select(amplitude_select),
         .offset(offset),
         .sin_waves(sin_wave),
         .debugDuty(debugDuty),

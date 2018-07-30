@@ -81,9 +81,7 @@ set rc [catch {
   set_property parent.project_path D:/Users/alexa/Documents/GitHub/QAM/QAM.xpr [current_project]
   set_property ip_output_repo D:/Users/alexa/Documents/GitHub/QAM/QAM.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  set_property XPM_LIBRARIES XPM_CDC [current_project]
   add_files -quiet D:/Users/alexa/Documents/GitHub/QAM/QAM.runs/synth_1/top.dcp
-  read_ip -quiet D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
   read_xdc D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/constrs_1/imports/02_proj_lab_3/Basys3_Master.xdc
   link_design -top top -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
@@ -164,7 +162,6 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_property XPM_LIBRARIES XPM_CDC [current_project]
   catch { write_mem_info -force top.mmi }
   write_bitstream -force top.bit -bin_file
   catch {write_debug_probes -quiet -force top}

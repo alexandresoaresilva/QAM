@@ -13,7 +13,7 @@ module sin_wave_Xperiods
     ) // for 400 MHz, /40 microsec
     (
     input clock, reset,
-	input [1:0] amplitude_select,
+	input [1:0] ampli_select,
 	input [5:0] offset,
 	output sin_waves,
 	output [7:0] debugDuty,
@@ -30,7 +30,7 @@ module sin_wave_Xperiods
 	wire [28:0] countedUpTo_wire;
     wire [1:0] amp_select;
     
-    assign amp_select = {(amplitude_select[1] | amplitude_select_reg[1]), (amplitude_select[0] | amplitude_select_reg[0])};
+    assign amp_select = {ampli_select[1], amplitude_select_reg[0]};
     
     sin_wave sinX(
         .clock(clock),
@@ -52,7 +52,8 @@ module sin_wave_Xperiods
             if (newClock & !(newClock & previous_clock )) begin//rising edge
                 if ( countedUpTo_wire  >=  PERIOD && countedUpTo_wire < PERIOD_X)
                     periods <= periods + 1;
-            
+                else
+                    periods <= periods;
             end
     
             previous_clock <= newClock;
