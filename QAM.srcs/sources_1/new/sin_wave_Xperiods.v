@@ -29,13 +29,14 @@ module sin_wave_Xperiods
     wire [8:0] sampleSelec_out;  
 	wire [28:0] countedUpTo_wire;
     wire [1:0] amp_select;
-    
-    assign amp_select = {ampli_select[1], amplitude_select_reg[0]};
+    reg [1:0] amp_select_reg;    
+    assign amp_select = amplitude_select_reg | ampli_select;
     
     sin_wave sinX(
         .clock(clock),
         .reset(reset),
         .amplitude_select(amp_select),
+        .amp_selectFlatVoltage(amplitude_select_reg),
         .offset_sampleSelect(offset),
         .sin_PWM(sin_waves),
         .dutyCycle_out(debugDuty),
@@ -44,7 +45,7 @@ module sin_wave_Xperiods
     
     always@(posedge clock) begin
         if (reset)
-            {periods, amplitude_select_reg, previous_clock} <= 0;
+            {periods, previous_clock} <= 0;
         else begin //previous sample is different from present one
             if ( countedUpTo_wire  >= 0 && countedUpTo_wire < PERIOD) begin
                 periods <= 0;
@@ -62,11 +63,15 @@ module sin_wave_Xperiods
 
 //    //selects basis pwm for transitions between symbols
     always@(posedge clock) begin
-        if ( countedUpTo_wire  >= 0 && countedUpTo_wire < PERIOD)
-            amplitude_select_reg <= 2'd3;
-        else
-            amplitude_select_reg <= 2'd0;
-    end
+        if (reset)
+            amplitude_select_reg <= 0;
+        else begin
+            if ( countedUpTo_wire  >= 0 && countedUpTo_wire < PERIOD)
+                amplitude_select_reg <= 2'd3;
+            else
+                amplitude_select_reg <= 2'd0;
+        end
+    end     
 
     defparam clockNew.PERIOD = PERIOD;
     PWM clockNew(
