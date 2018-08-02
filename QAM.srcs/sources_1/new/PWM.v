@@ -1,11 +1,11 @@
-module PWM #( parameter [28:0] PERIOD = 29'd250 ) // based on the Basys3's derived clock (400 MHz)
+module PWM #( parameter [28:0] PERIOD = 29'd800 ) // based on the Basys3's derived clock (400 MHz)
 
     //counterPeriods:
     // based on the Basys3's derived clock (400 MHz)
     //32 KHz 
     ( 
         input clock, reset,
-        input [7:0] dutyCycle,//for diving main 100 MHz frequency
+        input [9:0] dutyCycle,//for diving main 100 MHz frequency
         output reg PWM_pulse//,   output reg [26:0] debug_counter
     );
 
@@ -26,7 +26,7 @@ module PWM #( parameter [28:0] PERIOD = 29'd250 ) // based on the Basys3's deriv
         end 
     end
 
-    assign PWM_duty_wire = {21'd0, dutyCycle};
+    assign PWM_duty_wire = 29'd0 | dutyCycle;
       
     // always@(negedge clock) begin
     //   PWM_duty_wire <= {21'd0, dutyCycle};

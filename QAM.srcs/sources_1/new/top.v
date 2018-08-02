@@ -28,9 +28,9 @@ module top( input CLK,
     wire buttons;
     
     //wire doneConvertingConst_wire; 
-    wire [7:0] debugDuty_wire;
+    wire [9:0] debugDuty_wire;
     wire [9:0] index;
-    wire [2:0] debugXPeriod;
+    wire [3:0] debugXPeriod;
     wire sin_waveConst;
     wire [3:0] debug_HexSending_wire;
     wire [28:0]  countedUpTo_wire;
@@ -38,7 +38,7 @@ module top( input CLK,
     
  separateASCII_to_hex const(
 //         .clock(clk_400MHz),
-         .clock(newClock),
+         .clock(CLK),
          .reset(buttons),
          .sin_waveConst(sin_waveConst),
          .doneConvertingConst(LED[0]),
@@ -57,14 +57,14 @@ module top( input CLK,
 //  .clk_in1(CLK)
 // );
 
-    defparam sin_wavePWM.PERIOD = 4;
-    PWM sin_wavePWM(
-        .clock(CLK),
-        .reset(buttons),
-        .dutyCycle(2),
-        .PWM_pulse(newClock)
-      //  .debug_counter(debugCustomClkCounter_wire)
-    );
+//     defparam sin_wavePWM.PERIOD = 16;
+//     PWM sin_wavePWM(
+//         .clock(CLK),
+//         .reset(buttons),
+//         .dutyCycle(8),
+//         .PWM_pulse(newClock)
+//     //  .debug_counter(debugCustomClkCounter_wire)
+//     );
 //    reg [63:0] counter;
     
 //    initial {counter, reset_reg} <= 1;
@@ -77,10 +77,23 @@ module top( input CLK,
 //        if (counter > 64'd50 )
 //            reset_reg = 0;
 //    end
-    
-    
+    //[63:0] s_axis_config_tdata INPUT
+//   wire dds_stuff
+//dds_compiler_test uut
+//  (
+//    .aclk(CLK), 
+//    .s_axis_config_tvalid(),
+//    .s_axis_config_tdata(), //(63 DOWNTO 0);
+//    .s_axis_config_tlast(),// : IN STD_LOGIC;
+//    .m_axis_data_tvalid(),// : OUT STD_LOGIC;
+//    .m_axis_data_tdata(),// : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+//    .m_axis_phase_tvalid(),// : OUT STD_LOGIC;
+//    .m_axis_phase_tdata(),// : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+//    .event_s_config_tlast_missing(),// : OUT STD_LOGIC;
+//    .event_s_config_tlast_unexpected()// : OUT STD_LOGIC
+//  );
 
-    assign LED[15:1] = {7'd0, debugDuty_wire};
+    assign LED[15:1] = 15'd0 | debugDuty_wire;
     assign buttons = 1'd0 ||(|BTN);
   //  assign newClock = clk_400MHz : 1'd0;
     //assign JA = {clk_400MHz, CLK, 4'd0, {2{sin_waveConst}}};

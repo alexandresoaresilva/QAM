@@ -6,27 +6,28 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module sin_wave_Xperiods 
-    #(  parameter [28:0] PERIOD = 29'd16_000,
+    #(  //parameter [28:0] PERIOD = 29'd16_000,
+		parameter [28:0] PERIOD = 29'd100_000,
         parameter [2:0] LEFT_SHIFTS = 2, // FOR 8 periods, '; fopr 4, 2
-        parameter [28:0] HALF_PERIOD =  PERIOD >>1,
+        parameter [28:0] HALF_PERIOD =  PERIOD >> 1,
         parameter [28:0] PERIOD_X = PERIOD << LEFT_SHIFTS
     ) // for 400 MHz, /40 microsec
     (
     input clock, reset,
 	input [1:0] ampli_select,
-	input [5:0] offset,
+	input [6:0] offset,
 	output sin_waves,
-	output [7:0] debugDuty,
-	output [2:0] debug_periods
+	output [9:0] debugDuty,
+	output [3:0] debug_periods
     );
 
     reg [1:0] amplitude_select_reg;
     wire newClock;
     reg previous_clock;
 
-	reg [2:0] periods;
+	reg [3:0] periods;
 
-    wire [8:0] sampleSelec_out;  
+    wire [6:0] sampleSelec_out;  
 	wire [28:0] countedUpTo_wire;
     wire [1:0] amp_select;
     reg [1:0] amp_select_reg;    
@@ -36,7 +37,7 @@ module sin_wave_Xperiods
         .clock(clock),
         .reset(reset),
         .amplitude_select(amp_select),
-        .amp_selectFlatVoltage(amplitude_select_reg),
+        //.amp_selectFlatVoltage(amplitude_select_reg),
         .offset_sampleSelect(offset),
         .sin_PWM(sin_waves),
         .dutyCycle_out(debugDuty),
@@ -90,5 +91,5 @@ module sin_wave_Xperiods
       );
       
       
-    assign debug_periods = (periods === 3'dX || periods === 3'dz)? 3'd0 : periods ;
+    assign debug_periods = (periods === 4'dX || periods === 4'dz)? 4'd0 : periods ;
 endmodule

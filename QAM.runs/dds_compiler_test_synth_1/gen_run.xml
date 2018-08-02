@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="dds_compiler_test_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1533102654">
+  <File Type="PA-TCL" Name="dds_compiler_test.tcl"/>
+  <File Type="REPORTS-TCL" Name="dds_compiler_test_reports.tcl"/>
+  <File Type="RDS-RDS" Name="dds_compiler_test.vds"/>
+  <File Type="RDS-UTIL" Name="dds_compiler_test_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="dds_compiler_test_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="dds_compiler_test.dcp"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/dds_compiler_test">
+    <File Path="$PSRCDIR/sources_1/ip/dds_compiler_test/dds_compiler_test.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="dds_compiler_test"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/dds_compiler_test">
+    <File Path="$PSRCDIR/sources_1/ip/dds_compiler_test/dds_compiler_test.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="dds_compiler_test"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

@@ -22,7 +22,7 @@ module separateASCII_to_hex(
     input clock, reset,
     //output [11:0] sin_waveConst,
     output sin_waveConst, doneConvertingConst, 
-    output [7:0] debugDuty, reg [9:0] index, reg [2:0] debugXPeriod
+    output [9:0] debugDuty, reg [9:0] index, reg [3:0] debugXPeriod
     , output [3:0] debug_HexSending
     );
 
@@ -38,7 +38,7 @@ module separateASCII_to_hex(
     wire newClock;
     wire done_sending_hex;
     reg [2:0] previous_debug_periods;
-    wire [2:0] debug_periods;
+    wire [3:0] debug_periods;
     
     conv_Hex_to_sin_Xperiods hexToSinXp(
         .reset(reset_reg),
@@ -47,7 +47,8 @@ module separateASCII_to_hex(
         .sin_wave(sin_waveConst),
         .doneConverting(doneConvertingConst),
         .debugDuty(debugDuty),
-        .debug_periods(debug_periods) );
+        .debug_periods(debug_periods) 
+        );
         
 //    initial begin
 //        constit = {".aciremA fo setatS detinU eht rof noitutitsnoC siht hsilbatse dna niadro od ,ytiretsoP ruo dna ,sevlesruo ot ytrebiL fo sgnisselB eht eruces ,dna ,erafleW lareneg eht etomorp ,ecnefed nommoc eht rof edivorp ,ytiliuqnarT citsemod erusni ,ecitsuJ hsilbats ,noinU tcefrep erom a mrof ot redrO ni ,setatS detinU eht fo elpoeP eht eW",64'h0000_1111_1111_0000};

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Wed Aug  1 00:50:56 2018
+# Process ID: 16932
+# Current directory: D:/Users/alexa/Documents/GitHub/QAM/QAM.runs/dds_compiler_test_synth_1
+# Command line: vivado.exe -log dds_compiler_test.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dds_compiler_test.tcl
+# Log file: D:/Users/alexa/Documents/GitHub/QAM/QAM.runs/dds_compiler_test_synth_1/dds_compiler_test.vds
+# Journal file: D:/Users/alexa/Documents/GitHub/QAM/QAM.runs/dds_compiler_test_synth_1\vivado.jou
+#-----------------------------------------------------------
+source dds_compiler_test.tcl -notrace

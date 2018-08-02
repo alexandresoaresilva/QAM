@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Tue Jul 31 21:27:26 2018
+| Date         : Wed Aug  1 00:31:09 2018
 | Host         : laptopASUS running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     7 |
-| Unused register locations in slices containing registers |    29 |
+| Number of unique control sets                            |     8 |
+| Unused register locations in slices containing registers |    27 |
 +----------------------------------------------------------+-------+
 
 
@@ -35,9 +35,10 @@ Table of Contents
 | Fanout | Control Sets |
 +--------+--------------+
 |      2 |            1 |
-|     11 |            1 |
-|     12 |            1 |
-|    16+ |            4 |
+|      4 |            1 |
+|      5 |            1 |
+|     14 |            2 |
+|    16+ |            3 |
 +--------+--------------+
 
 
@@ -47,28 +48,29 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              11 |            7 |
+| No           | No                    | No                     |               5 |            3 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             162 |           39 |
-| Yes          | No                    | No                     |             181 |           49 |
+| No           | Yes                   | No                     |             140 |           41 |
+| Yes          | No                    | No                     |             181 |           46 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |            1745 |          274 |
+| Yes          | Yes                   | No                     |            1751 |          270 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+------------------+---------------------------------------------------------------------+-----------------------------------------------------------+------------------+----------------+
-|   Clock Signal   |                            Enable Signal                            |                      Set/Reset Signal                     | Slice Load Count | Bel Load Count |
-+------------------+---------------------------------------------------------------------+-----------------------------------------------------------+------------------+----------------+
-|  newClock_BUFG   | const/hexToSinXp/sinXp/sinX/sin_wavePWM/PWM_counter/PWM_pulse_reg_2 | const/reset_reg                                           |                1 |              2 |
-|  newClock_BUFG   |                                                                     |                                                           |                7 |             11 |
-|  newClock_BUFG   | const/hexToSinXp/sinXp/sinX/clockNew/previous_offset                | const/hexToSinXp/sinXp/sinX/clockNew/sample_select_reg[5] |                3 |             12 |
-|  JA_OBUF_BUFG[6] |                                                                     | sin_wavePWM/PWM_counter/SR[0]                             |                7 |             30 |
-|  newClock_BUFG   |                                                                     | const/reset_reg                                           |               32 |            132 |
-|  newClock_BUFG   | const/hexToSinXp/sinXp/hexSending                                   |                                                           |               98 |            362 |
-|  newClock_BUFG   | const/hexToSinXp/sinXp/hexSending                                   | const/reset_reg                                           |              270 |           1731 |
-+------------------+---------------------------------------------------------------------+-----------------------------------------------------------+------------------+----------------+
++------------------+---------------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
+|   Clock Signal   |                            Enable Signal                            |                       Set/Reset Signal                      | Slice Load Count | Bel Load Count |
++------------------+---------------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
+|  JA_OBUF_BUFG[6] | const/hexToSinXp/sinXp/sinX/sin_wavePWM/PWM_counter/PWM_pulse_reg_1 | const/reset_reg                                             |                2 |              2 |
+|  JA_OBUF_BUFG[6] | const/hexToSinXp/sinXp/x_periods/E[0]                               | const/hexToSinXp/sinXp/clockNew/SR[0]                       |                1 |              4 |
+|  JA_OBUF_BUFG[6] |                                                                     |                                                             |                3 |              5 |
+|  JA_OBUF_BUFG[6] |                                                                     | const/hexToSinXp/sinXp/sinX/dutyCycle[9]_i_1_n_0            |                6 |             14 |
+|  JA_OBUF_BUFG[6] | const/hexToSinXp/sinXp/sinX/clockNew/previous_offset                | const/hexToSinXp/sinXp/sinX/clockNew/previous_offset_reg[0] |                9 |             14 |
+|  JA_OBUF_BUFG[6] |                                                                     | const/reset_reg                                             |               35 |            126 |
+|  JA_OBUF_BUFG[6] | const/hexToSinXp/sinXp/hexSending                                   |                                                             |               92 |            362 |
+|  JA_OBUF_BUFG[6] | const/hexToSinXp/sinXp/hexSending                                   | const/reset_reg                                             |              258 |           1731 |
++------------------+---------------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
 
 
