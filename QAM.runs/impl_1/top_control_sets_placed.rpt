@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Wed Aug  1 00:31:09 2018
+| Date         : Sun Aug  5 17:52:00 2018
 | Host         : laptopASUS running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     8 |
-| Unused register locations in slices containing registers |    27 |
+| Number of unique control sets                            |    16 |
+| Unused register locations in slices containing registers |    54 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,11 +34,14 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
+|      1 |            2 |
 |      2 |            1 |
-|      4 |            1 |
-|      5 |            1 |
+|      4 |            2 |
+|      7 |            1 |
+|      8 |            1 |
+|     13 |            1 |
 |     14 |            2 |
-|    16+ |            3 |
+|    16+ |            6 |
 +--------+--------------+
 
 
@@ -48,12 +51,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               5 |            3 |
+| No           | No                    | No                     |              13 |            8 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             140 |           41 |
-| Yes          | No                    | No                     |             181 |           46 |
+| No           | Yes                   | No                     |             324 |           81 |
+| Yes          | No                    | No                     |             196 |           52 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |            1751 |          270 |
+| Yes          | Yes                   | No                     |            1757 |          268 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -63,14 +66,22 @@ Table of Contents
 +------------------+---------------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
 |   Clock Signal   |                            Enable Signal                            |                       Set/Reset Signal                      | Slice Load Count | Bel Load Count |
 +------------------+---------------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
-|  JA_OBUF_BUFG[6] | const/hexToSinXp/sinXp/sinX/sin_wavePWM/PWM_counter/PWM_pulse_reg_1 | const/reset_reg                                             |                2 |              2 |
+|  JA_OBUF_BUFG[6] | DDS/DDS_driver/ad9850_PWMclock/FQ_UD_reg                            | DDS/DDS_driver/ad9850_PWMclock/PWM_counter/SR[0]            |                1 |              1 |
+|  JA_OBUF_BUFG[6] | DDS/DDS_driver/p_1_in                                               | DDS/DDS_driver/DDS_counter/W_CLK_reg                        |                1 |              1 |
+|  JA_OBUF_BUFG[6] | const/hexToSinXp/sinXp/sinX/sin_wavePWM/PWM_counter/PWM_pulse_reg_1 | const/reset_reg                                             |                1 |              2 |
+|  JA_OBUF_BUFG[6] | DDS/ad9850_PWMclock/freq_update_reg_reg_0                           | DDS/previous_freq_phase_select[2]_i_1_n_0                   |                2 |              4 |
 |  JA_OBUF_BUFG[6] | const/hexToSinXp/sinXp/x_periods/E[0]                               | const/hexToSinXp/sinXp/clockNew/SR[0]                       |                1 |              4 |
-|  JA_OBUF_BUFG[6] |                                                                     |                                                             |                3 |              5 |
+|  JA_OBUF_BUFG[6] | DDS/ad9850_PWMclock/E[0]                                            |                                                             |                1 |              7 |
+|  JA_OBUF_BUFG[6] | DDS/DDS_driver/ad9850_PWMclock/E[0]                                 |                                                             |                2 |              8 |
+|  JA_OBUF_BUFG[6] |                                                                     |                                                             |                8 |             13 |
 |  JA_OBUF_BUFG[6] |                                                                     | const/hexToSinXp/sinXp/sinX/dutyCycle[9]_i_1_n_0            |                6 |             14 |
-|  JA_OBUF_BUFG[6] | const/hexToSinXp/sinXp/sinX/clockNew/previous_offset                | const/hexToSinXp/sinXp/sinX/clockNew/previous_offset_reg[0] |                9 |             14 |
-|  JA_OBUF_BUFG[6] |                                                                     | const/reset_reg                                             |               35 |            126 |
-|  JA_OBUF_BUFG[6] | const/hexToSinXp/sinXp/hexSending                                   |                                                             |               92 |            362 |
-|  JA_OBUF_BUFG[6] | const/hexToSinXp/sinXp/hexSending                                   | const/reset_reg                                             |              258 |           1731 |
+|  JA_OBUF_BUFG[6] | const/hexToSinXp/sinXp/sinX/clockNew/previous_offset                | const/hexToSinXp/sinXp/sinX/clockNew/previous_offset_reg[0] |                7 |             14 |
+|  JA_OBUF_BUFG[6] |                                                                     | DDS/freq_update_reg_reg_n_0                                 |                6 |             29 |
+|  JA_OBUF_BUFG[6] |                                                                     | DDS/DDS_driver/counter_reg[0]_0                             |               16 |             64 |
+|  JA_OBUF_BUFG[6] |                                                                     | DDS/DDS_driver/ad9850_PWMclock/PWM_counter/SR[0]            |               21 |             91 |
+|  JA_OBUF_BUFG[6] |                                                                     | const/reset_reg                                             |               32 |            126 |
+|  JA_OBUF_BUFG[6] | const/hexToSinXp/sinXp/hexSending                                   |                                                             |               98 |            362 |
+|  JA_OBUF_BUFG[6] | const/hexToSinXp/sinXp/hexSending                                   | const/reset_reg                                             |              255 |           1731 |
 +------------------+---------------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
 
 

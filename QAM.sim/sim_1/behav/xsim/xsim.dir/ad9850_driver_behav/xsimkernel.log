@@ -1,0 +1,7 @@
+Running: xsim.dir/ad9850_driver_behav/xsimk.exe -simmode gui -wdb ad9850_driver_behav.wdb -simrunnum 0 -socket 52459
+Design successfully loaded
+Design Loading Memory Usage: 5344 KB (Peak: 5344 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 5964 KB (Peak: 5964 KB)
+Simulation CPU Usage: 1406 ms

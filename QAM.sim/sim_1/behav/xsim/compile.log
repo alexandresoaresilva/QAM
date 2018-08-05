@@ -1,8 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/AD_9850_program.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AD_9850_program
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/PWM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module PWM
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/counter.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module counter
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sim_1/new/AD9850_program_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AD9850_program_tb

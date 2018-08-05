@@ -37,7 +37,9 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo d:/Users/alexa/Documents/GitHub/QAM/QAM.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
+  D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/AD_9850_program.v
   D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/PWM.v
+  D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/adDriver.v
   D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/conv_Hex_to_sin_Xperiods.v
   D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/counter.v
   D:/Users/alexa/Documents/GitHub/QAM/QAM.srcs/sources_1/new/separateASCII_to_hex.v

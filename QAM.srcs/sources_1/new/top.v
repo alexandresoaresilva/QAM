@@ -21,8 +21,8 @@
 
 
 module top( input CLK,
-            input [4:0] BTN, 
-            output [15:0] LED, [7:0] JA );
+            input [4:0] BTN, [2:0]SW,
+            output [15:0] LED, [7:0] JA,  [7:0] JB);
     wire newClock, locked;
     //wire clk_400MHz;
     wire buttons;
@@ -65,39 +65,35 @@ module top( input CLK,
 //         .PWM_pulse(newClock)
 //     //  .debug_counter(debugCustomClkCounter_wire)
 //     );
-//    reg [63:0] counter;
+    reg [63:0] counter;
     
-//    initial {counter, reset_reg} <= 1;
+    initial {counter, reset_reg} <= 1;
     
-//    always@(posedge CLK) begin
-//        if(buttons)
-//            counter <= 0;
-//        else
-//            counter <= counter + 1;
-//        if (counter > 64'd50 )
-//            reset_reg = 0;
-//    end
+    always@(posedge CLK) begin //it executes the rest correctly
+        if(buttons)
+            counter <= 0;
+        else
+            counter <= counter + 1;
+        if (counter > 64'd50 )
+            reset_reg = 0;
+    end
     //[63:0] s_axis_config_tdata INPUT
 //   wire dds_stuff
-//dds_compiler_test uut
-//  (
-//    .aclk(CLK), 
-//    .s_axis_config_tvalid(),
-//    .s_axis_config_tdata(), //(63 DOWNTO 0);
-//    .s_axis_config_tlast(),// : IN STD_LOGIC;
-//    .m_axis_data_tvalid(),// : OUT STD_LOGIC;
-//    .m_axis_data_tdata(),// : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-//    .m_axis_phase_tvalid(),// : OUT STD_LOGIC;
-//    .m_axis_phase_tdata(),// : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-//    .event_s_config_tlast_missing(),// : OUT STD_LOGIC;
-//    .event_s_config_tlast_unexpected()// : OUT STD_LOGIC
-//  );
+    wire W_CLK_wire, FQ_UD_wire;
+aDriver DDS(
+    .reset(reset_reg | buttons), 
+    .clock(CLK), 
+    .freq_phase_select(SW[2:0]),
+    .DATA(JB[7:0]), 
+    .W_CLK(W_CLK_wire), 
+    .FQ_UD(FQ_UD_wire)
+    );
 
     assign LED[15:1] = 15'd0 | debugDuty_wire;
     assign buttons = 1'd0 ||(|BTN);
   //  assign newClock = clk_400MHz : 1'd0;
     //assign JA = {clk_400MHz, CLK, 4'd0, {2{sin_waveConst}}};
-    assign JA = {1'b0,CLK, 4'd0, {2{sin_waveConst}}};
+    assign JA = {1'b0,CLK, 2'd0,FQ_UD_wire, W_CLK_wire, {2{sin_waveConst}}};
     //assign newClock_wire = ~locked 
        
 endmodule
