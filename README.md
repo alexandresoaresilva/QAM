@@ -1,2 +1,2 @@
 # QAM
-16 Quadrature Amplitude Modulation, implemented with a 25 KHz PWM signal using a 400 MHz buffered clock on a Digilent Basys3 FPGA. Each 4 periods of the 25 kHz represents one 16-QAM symbol, yielding a 6250 symbols per second rate.
+16 Quadrature Amplitude Modulation, implemented with a 1 KHz PWM signal using the Xilinx Basys3's 100 MHz clock. Four sine wave periods make up a 16-QAM symbol; the first period is always a sine wave zero (base voltage), followed by t3 periods of the amplitude modulated and phase shifted sine wave.
