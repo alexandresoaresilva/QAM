@@ -3,4 +3,4 @@
 
 Low pass filter is needed to recover the 1 kHz sine wave from the board's output.
 
-For images of the Verilog test benches and of the oscilloscope readings from the FPGA - which show the 16-QAM signal - please read Alex final report.pdf in this project's root folder. 
+For more details about the implementation, along with images of the Verilog test benches and of the oscilloscope readings from the FPGA - which show the 16-QAM signal - please read Alex final report.pdf in this project's root folder. 
