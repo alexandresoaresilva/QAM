@@ -18,7 +18,8 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-module AD_9850_program(
+module AD_9850_program( //this module only works occasionally, which is why it's not recommended.
+                        // Maybe it's necessary to implemente start /stop/reset
     input reset, clock, [31:0] newFreq, [4:0] phase, 
     input freq_update,
     output reg [7:0] DATA, 
