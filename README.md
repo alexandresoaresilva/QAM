@@ -15,3 +15,5 @@ There are two Matlab scripts of interest that were invaluable to the Verilog imp
 - [sin_wave_v2.m](https://github.com/alexandresoaresilva/QAM/tree/master/_Matlab/script_writes_Verilog_sin_code/sin_wave_v2.m): writes the Verilog code that produces the PWM signal related to the sine wave. The script's output is the file **PWM_transmission.txt**.
 
 - [sim_qam.m](https://github.com/alexandresoaresilva/QAM/blob/master/_Matlab/sim/sim_qam.m): simulates the FPGA implementation of the preamble to the U.S. Constitution being transmitted in 16-QAM.
+
+The module written for the AD9850 (AD9850_program_tb.v) wasn't implemented fully. I don't have time to complete it, so you could have some fun doing it!
